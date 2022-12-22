@@ -1963,3 +1963,14 @@ for i in val:
     if i == val[2]:
         # print(i)
         print('value of 3rd key :', key[2])
+
+
+
+
+s = input('entre any string  ')
+l = []
+for i in s:
+    if i not in l:
+        l.append(i) 
+output = ''.join(l)
+print(output)
