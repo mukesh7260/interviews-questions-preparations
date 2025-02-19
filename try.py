@@ -1,55 +1,21 @@
-# l = [23,2,45,98,6,43,987,34]
-# # sort assending orde 
+# import re
 
-# for i in range(len(l)):
-#     for j in range(i+1,len(l)):
-#         if l[i]<l[j]:
-#             l[i],l[j] = l[j],l[i]   
-
-# print(l)
-
-
-# character occurance 
-
-# s = 'rohit sharma'
-# d = {}
-# for i in s:
-#     if i in ' ':
-#         continue
-#     if i not in d:
-#         d[i] = 1
-#     else:   
-#         d[i] += 1
-# print(d)
+# n = input('Enter mobile number: ')
+# pattern = re.compile(r"^(?:\+91|91|0)?[-\s]?[7-9][0-9]{9}$")
+# if pattern.match(n):
+#     print(f'{n} is a valid mobile number')
+# else:
+#     print(f'{n} is not a valid mobile number')
 
 
-# s = 'rohit sharma'
-# d = {}
-# for i in s:
-#     if i!= ' ':
-#         if i not in d:
-#             d[i] = 1
-#         else:   
-#             d[i] = d[i] + 1 
-# for k, v in d.items():
-#     print(f'{k} - {v}')
 
+import re
 
-# s = 'rohit sharma'
-# d = {}
-# for i in s:
-#     if i!= ' ':
-#         d[i] = d.get(i,0) + 1
-# for k, v in d.items():
-#     print(f'{k} - {v}') 
+n = input('Enter mobile number: ')
+pattern = re.compile(r"^(?:\+91|91|0)?[\s]?[7-9][0-9]{9}$")
 
-
-# s = 'rohit sharma'
-# d = {}
-# for i in s:
-#     if i!= ' ':
-#        a = d.get(i,0) + 1
-#        d[i] = a
-
-# for k, v in d.items():
-#     print(f'{k} - {v}')
+# +91|91|0 ke sath yadi dash aata h tb -\s remove kr dega yadi nahi aaya tb start from number . 
+if pattern.match(n):
+    print(f'{n} is a valid mobile number')
+else:
+    print(f'{n} is not a valid mobile number')

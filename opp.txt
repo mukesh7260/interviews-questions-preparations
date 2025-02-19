@@ -2032,3 +2032,54 @@ print(output)
 
 # for k, v in d.items():
 #     print(f'{k} - {v}')
+
+
+
+import re
+
+n = input('Enter mobile number: ')
+pattern = re.compile(r"^(?:\+91|91|0)?[-\s]?[7-9][0-9]{9}$")
+if pattern.match(n):
+    print(f'{n} is a valid mobile number')
+else:
+    print(f'{n} is not a valid mobile number')
+
+
+# explatation : - 
+
+(?:\+91|91|0)? :- Here, the ? means that the group ( +91 | 91 | 0 ) is optional. So, the number could either:
+Start with +91, 91, or 0, or
+
+[-\s] matches either a hyphen (-) or any whitespace character (like a space, tab, etc.).
+
+
+? :- use for one case or zero case . (?:\+91|91|0) this is not enter these all 91 , +91 , 0 then ? consider zero case. It runs always . 
+
+(?:\+91|91|0)? : - you not enter +91 , 91  , 0 then it understand that zero occerance it will run also only 7260844367 case also . 
+
+
+
+
+
+
+# import re
+
+# n = input('Enter mobile number: ')
+# pattern = re.compile(r"^(?:\+91|91|0)?[-\s]?[7-9][0-9]{9}$")
+# if pattern.match(n):
+#     print(f'{n} is a valid mobile number')
+# else:
+#     print(f'{n} is not a valid mobile number')
+
+
+
+import re
+
+n = input('Enter mobile number: ')
+pattern = re.compile(r"^(?:\+91|91|0)?[\s]?[7-9][0-9]{9}$")
+
+# +91|91|0 ke sath yadi dash aata h tb -\s remove kr dega yadi nahi aaya tb start from number . 
+if pattern.match(n):
+    print(f'{n} is a valid mobile number')
+else:
+    print(f'{n} is not a valid mobile number')
