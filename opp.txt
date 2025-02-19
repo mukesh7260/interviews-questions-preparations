@@ -2083,3 +2083,18 @@ if pattern.match(n):
     print(f'{n} is a valid mobile number')
 else:
     print(f'{n} is not a valid mobile number')
+
+
+
+
+# valid email address : 
+
+import re
+
+email = input("Enter email address: ")
+# regex = "^[A-Z0-9.%+-]+@[A-Z0-9]+\.[A-Z]{2,}$"
+regex = r"^[\w.%+-]+@[A-Za-z0-9]+\.[A-Za-z]{3,}$"
+if len(email) > 7 and re.match(regex, email, re.IGNORECASE) is not None:
+    print("Valid email address")
+else:
+    print("Invalid email address")
