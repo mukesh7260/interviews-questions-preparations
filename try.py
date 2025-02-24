@@ -1,6 +1,11 @@
-l = [2,45,87,32,65,37]
-max_element = l[0]
-for i in l:
-    if i > max_element:
-        max_element = i
-print(max_element) 
+
+
+# sorting list eithor assending or desending
+
+l = [23,45,8,47,27,54] 
+for i in range(len(l)):
+    for j in range(len(l)):
+        if l[i] > l[j]:
+            l[i] , l[j] = l[j] , l[i] 
+
+print(l)

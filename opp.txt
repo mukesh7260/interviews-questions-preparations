@@ -2098,3 +2098,24 @@ if len(email) > 7 and re.match(regex, email, re.IGNORECASE) is not None:
     print("Valid email address")
 else:
     print("Invalid email address")
+
+
+
+
+#  find max element without using bultin method 
+
+
+
+l = [2,45,87,32,65,37]
+for i in range(len(l)):
+    if l[i] == l[2]:
+        print(l[i])
+
+
+# or 
+
+max_element = l[0]
+for i in l:
+    if i > max_element:
+        max_element = i
+print(max_element)
